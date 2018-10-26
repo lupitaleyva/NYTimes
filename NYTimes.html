@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Movies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div>
+        <button>
+            search tearm
+        </button>
+
+        <button>
+            number of records to retrieve
+        </button>
+
+        <button>
+            start year
+        </button>
+
+        <button>
+            end year
+        </button>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script type ="text/javascript">
+
+        var apiKey= "7ca76b827f864a05a9b30bd1ccf9b78a";
+
+        var searchTerm= "iphone";
+        var recordsToRetrieve="2";
+        var startYear="2017";
+        var endYear="2018";
+
+
+        var queryURL="https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ searchTerm + "&api-key="+apiKey;
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response);
+        });
+
+     
+   
+
+// Storing the rating data
+var parameters = response.searchTerm;
+
+
+
+
+    </script>
+
+
+</body>
+</html>
